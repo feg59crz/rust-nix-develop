@@ -23,6 +23,20 @@
             pkg-config
             exa
             fd
+            rust-bin.stable.latest.default
+          ];
+
+          shellHook = ''
+            alias ls=exa
+            alias find=fd
+          '';
+        };
+        devShells.beta = mkShell {
+          buildInputs = [
+            openssl
+            pkg-config
+            exa
+            fd
             rust-bin.beta.latest.default
           ];
 
